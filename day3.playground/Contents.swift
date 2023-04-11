@@ -106,3 +106,13 @@ colors.insert("Yellow")
 colors.insert("Green")
 colors.insert("Blue")
 print(colors)
+
+//enums (enumerations):
+
+enum Weekday {
+    case monday, tuesday, wednesday, thursday, friday
+}
+var day = Weekday.monday
+print(day)
+day = .thursday
+print(day)
