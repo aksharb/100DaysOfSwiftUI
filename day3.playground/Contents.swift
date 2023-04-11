@@ -93,3 +93,16 @@ age["Rahul"] = 32
 age["Vijay"] = 43
 age["Neha"] = 35
 print(age["Rahul", default: 0])
+//need to work more on dictionaries
+
+//sets:
+var brands = Set(["Samsung", "LG", "Google", "Apple", "Microsoft", "Casio"])
+print(brands)
+
+brands.insert("Dell")
+print(brands)
+var colors = Set<String>()
+colors.insert("Yellow")
+colors.insert("Green")
+colors.insert("Blue")
+print(colors)
