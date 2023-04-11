@@ -72,4 +72,24 @@ let vehicle = [
     "transmission" : "Auto",
     "fuel" : "Petrol"
 ]
-print(vehicle)
+print(vehicle["name", default: "Unknown"])
+print(vehicle["brand", default: "Unknown"])
+print(vehicle["transmission", default: "Unknown"])
+
+let isElectric = [
+    "Nexon": true,
+    "Figo": false,
+    "XUV": true,
+]
+
+let olympics = [
+    2012: "London",
+    2016: "Rio de Janeiro",
+    2021: "Tokyo"
+]
+print(olympics[2012, default: "Unknown"])
+var age = [String: Int]()
+age["Rahul"] = 32
+age["Vijay"] = 43
+age["Neha"] = 35
+print(age["Rahul", default: 0])
