@@ -108,4 +108,7 @@ case .unknown:
 }
 
 //ternary operators:
+let personAge = 18
+let canVote = personAge >= 18 ? "You can vote" : "You can't vote"
+print(canVote)
 
