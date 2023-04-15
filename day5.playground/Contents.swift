@@ -88,3 +88,24 @@ if value == .airplane || value == .helicopter {
 } else if value == .car {
     print("Time to get stuck in traffic")
 }
+
+//switch case:
+enum weather {
+    case sun, rain, wind, snow, unknown
+}
+let forecast = weather.sun
+switch forecast {
+case .sun:
+    print("It's a sunny day")
+case .rain:
+    print("It's a rainy day")
+case .wind:
+    print("It's a windy day")
+case .snow:
+    print("It's a snowy day")
+case .unknown:
+    print("Our forecast generator is broken")
+}
+
+//ternary operators:
+
