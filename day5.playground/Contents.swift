@@ -112,3 +112,17 @@ let personAge = 18
 let canVote = personAge >= 18 ? "You can vote" : "You can't vote"
 print(canVote)
 
+let userAge = 25
+print(userAge > 18 ? "You are an adult" : "Your are a minor")
+
+let names = ["Raka", "Montey", "Gaga", "Popu", "Chochu"]
+let crewCount = names.isEmpty ? "No one" : "\(names.count) people"
+print(crewCount)
+
+enum Theme {
+    case light, dark
+}
+let theme = Theme.dark
+
+let background = theme == .dark ? "black" : "white"
+print(background)
