@@ -17,3 +17,11 @@ for i in 1...10 {
     }
               print()
 }
+// _ is used when we don't need to initialize a constant:
+let days = ["Monday", "Tuesday", "Thursday", "Sunday"]
+for day in days{
+    print("Meet me on \(day)")
+}
+for _ in days{ //we use _ because values are not needed inside the loop
+    print("Meet me")
+}
