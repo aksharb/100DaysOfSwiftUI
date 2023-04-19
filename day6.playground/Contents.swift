@@ -25,3 +25,5 @@ for day in days{
 for _ in days{ //we use _ because values are not needed inside the loop
     print("Meet me")
 }
+print(days[1...3])
+print(days[1...])
