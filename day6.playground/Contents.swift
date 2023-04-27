@@ -42,3 +42,12 @@ print(id)
 let amount = Double.random(in: 0...1)
 print(amount)
 
+var roll = 0
+
+while roll != 6 {
+    roll = Int.random(in: 1...6)
+    print("I rolled a \(roll)")
+}
+print("Hit 6!")
+
+
