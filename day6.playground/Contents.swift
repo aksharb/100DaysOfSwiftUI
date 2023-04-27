@@ -35,3 +35,10 @@ while countdown > 0 {
     countdown -= 1
 }
 print("Blast off!")
+
+let id = Int.random(in: 1...200)
+print(id)
+
+let amount = Double.random(in: 0...1)
+print(amount)
+
