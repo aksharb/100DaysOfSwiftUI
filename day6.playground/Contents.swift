@@ -27,3 +27,11 @@ for _ in days{ //we use _ because values are not needed inside the loop
 }
 print(days[1...3])
 print(days[1...])
+
+//while loop:
+var countdown = 10
+while countdown > 0 {
+    print("\(countdown)")
+    countdown -= 1
+}
+print("Blast off!")
