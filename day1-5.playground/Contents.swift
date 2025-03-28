@@ -99,3 +99,32 @@ enum Weekday {
     case saturday
     case sunday
 }
+
+//type annotations and type inference
+let bird: String = "Parrot"
+print(bird)
+
+var score: Double = 0
+print(score)
+
+var cities: [String] = ["Dehradun", "Kolkata", "Mumbai"]
+print(cities)
+
+var capitals: [String: String] = ["India": "New Delhi", "USA": "Washington D.C."]
+print(capitals)
+
+var sports: Set<String> = ["Cricket", "Football", "Basketball"]
+print(sports)
+
+var animals = [String]()
+animals.append("Cat")
+animals.append("Dog")
+animals.append("Elephant")
+print(animals)
+
+//checkpoint 2
+let myArr = ["blue", "red", "black", "white", "red", "pink"]
+print(myArr.count)
+let myArrUnique = (Set(myArr))
+print(myArrUnique.count)
+
