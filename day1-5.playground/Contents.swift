@@ -128,3 +128,19 @@ print(myArr.count)
 let myArrUnique = (Set(myArr))
 print(myArrUnique.count)
 
+//if:
+let speed = 88
+let percentage = 85
+let age1 = 18
+
+if speed >= 88 {
+    print("The speed is more than or equal to 88!")
+}
+if percentage < 85 {
+    print("Sorry, you failed the test.")
+}
+
+if age1 >= 18 {
+    print("You're eligible to vote")
+}
+
