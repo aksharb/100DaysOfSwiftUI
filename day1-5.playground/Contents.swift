@@ -144,3 +144,81 @@ if age1 >= 18 {
     print("You're eligible to vote")
 }
 
+// Create the username variable
+var username = ""
+
+// If `username` contains an empty string
+if username == "" {
+    // Make it equal to "Anonymous"
+    username = "Anonymous"
+}
+
+// Now print a welcome message
+print("Welcome, \(username)!")
+enum Sizes: Comparable {
+    case small
+    case large
+    case medium
+}
+
+let first = Sizes.small
+let second = Sizes.medium
+let third = Sizes.large
+
+print(first < second)
+print(second < third)
+
+let temp = 25
+if temp > 20 && temp < 30 {
+    print("It's a nice day.")
+}
+
+let userAge = 14
+let hasParentalConsent = true
+
+if userAge >= 18 || hasParentalConsent == true {
+    print("You can buy the game")
+}
+
+if userAge >= 18 || hasParentalConsent {
+    print("You can buy the game")
+}
+
+//Switch
+
+enum Weather {
+    case sun, rain, wind, snow, unknown
+}
+let forecast = Weather.sun
+switch forecast {
+case .sun:
+    print("Dhoop")
+case .rain:
+    print("baarish")
+case .wind:
+    print("hawa")
+case .snow:
+    print("baraf")
+case .unknown:
+    print("pata nahi")
+}
+
+let day = 5
+print("My true love gave to me…")
+
+switch day {
+case 5:
+    print("5 golden rings")
+    fallthrough
+case 4:
+    print("4 calling birds")
+    fallthrough
+case 3:
+    print("3 French hens")
+    fallthrough
+case 2:
+    print("2 turtle doves")
+    fallthrough
+default:
+    print("A partridge in a pear tree")
+}
