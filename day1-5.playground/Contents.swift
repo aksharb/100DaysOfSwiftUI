@@ -222,3 +222,8 @@ case 2:
 default:
     print("A partridge in a pear tree")
 }
+
+//ternary operator:
+let age2 = 18
+let canVote = age1 >= 18 ? "yes" : "no"
+print(canVote)
