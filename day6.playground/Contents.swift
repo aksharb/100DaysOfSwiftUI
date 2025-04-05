@@ -1,53 +1,66 @@
 import Cocoa
-// loops:
-let fruits = ["apple", "banana", "watermelon", "kiwi", "pear", "papaya"]
-for fruit in fruits {
-    print("\(fruit) is a fruit")
+
+//loops
+//for loop
+let students = ["Alice", "Bob", "Charlie", "David"]
+for student in students {
+    print("\(student) studies with me.")
 }
 
 for i in 1...10 {
-    print("5 x \(i) = \(5*i)") //multiplication table of 5
-}
-
-//multiplication tables from 1 to 10:
-for i in 1...10 {
-    print("Multiplication table of \(i):")
+    print("The \(i) times table:")
     for j in 1...10 {
-        print("\(j) x \(i) = \(j*i)")
+        print("  \(j) X \(i) is \(j*i)")
     }
-              print()
+    print()
 }
-// _ is used when we don't need to initialize a constant:
-let days = ["Monday", "Tuesday", "Thursday", "Sunday"]
-for day in days{
-    print("Meet me on \(day)")
+
+for i in 1...5 { // 1 through 5
+    print("Counting fom 1 through 5: \(i)")
 }
-for _ in days{ //we use _ because values are not needed inside the loop
-    print("Meet me")
+
+for i in 1..<5 { //1 up to 5
+    print("Counting fom 1 up to 5: \(i)")
 }
-print(days[1...3])
-print(days[1...])
+
+var lyric = "Hello and"
+for _ in 1...5 {
+    lyric += " welcome"
+}
+print(lyric)
 
 //while loop:
-var countdown = 10
-while countdown > 0 {
-    print("\(countdown)")
-    countdown -= 1
+var age = 1
+while age < 10 {
+    print("I am \(age) years old.")
+    age += 1
 }
-print("Blast off!")
 
-let id = Int.random(in: 1...200)
-print(id)
-
-let amount = Double.random(in: 0...1)
-print(amount)
-
-var roll = 0
-
-while roll != 6 {
-    roll = Int.random(in: 1...6)
-    print("I rolled a \(roll)")
+//break and continue
+for i in 1...10 {
+    if i == 3 {
+        continue
+    }
+    print(i)
 }
-print("Hit 6!")
 
+for j in 1...10 {
+    if j == 4 {
+        break
+    }
+    print(j)
+}
+let number1 = 4
+let number2 = 5
+var multiples = [Int]()
 
+for i in 1...100000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+    }
+    if multiples.count == 10 {
+        break
+    }
+}
+
+print(multiples)
