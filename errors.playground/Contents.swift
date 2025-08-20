@@ -26,9 +26,9 @@ func validateUser(username: String, age: Int) throws -> Bool {
 
 let username = "alice"
 let age = 21
-var result = false
 do {
-    result = try validateUser(username: username, age: age)
+    try validateUser(username: username, age: age)
+    print("username is valid")
 } catch ValidationError.usernameTooShort {
     print("Username is too short.")
 } catch ValidationError.usernameContainsIllegalCharacters {
@@ -39,6 +39,3 @@ do {
     print("An unknown error occured")
 }
 
-if result {
-    print("username is valid")
-}
