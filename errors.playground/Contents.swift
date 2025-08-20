@@ -1,5 +1,6 @@
 import Cocoa
 
+/*
 //Step 1: Create a ValidationError enum
 
 enum ValidationError: Error {
@@ -39,3 +40,33 @@ do {
     print("An unknown error occured")
 }
 
+*/
+
+enum discountError: Error {
+    case negativeDiscount
+    case discountTooHigh
+}
+
+func calculateFinalPrice(originalPrice: Double, discount: Double) throws -> Double {
+    if discount < 0 {
+        throw discountError.negativeDiscount
+    }
+    if discount >= 100 {
+        throw discountError.discountTooHigh
+    }
+    
+    return originalPrice - (discount/100 * originalPrice)
+}
+
+let originalPrice: Double = 100
+let discount: Double = 10
+
+do {
+    try print("Final price after discount: ", (calculateFinalPrice(originalPrice: originalPrice, discount: discount)))
+} catch discountError.negativeDiscount {
+    print("Discount can't be negative")
+} catch discountError.discountTooHigh {
+    print("Discount can't be higher than 100%")
+} catch {
+    print("an unknown error occured")
+}
