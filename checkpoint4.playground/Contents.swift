@@ -10,7 +10,7 @@ func squareRoot(_ n: Int) throws -> Int {
         throw RootError.out_of_bound
     }
     
-    for i in 2..<n {
+    for i in 2...100 {
         if i*i == n {
            return i
         }
@@ -18,7 +18,7 @@ func squareRoot(_ n: Int) throws -> Int {
     throw RootError.no_root
 }
 
-let number = 16
+let number = 9
 
 do {
     let result = try squareRoot(number)
