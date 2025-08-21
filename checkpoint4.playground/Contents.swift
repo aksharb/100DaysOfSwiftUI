@@ -1,32 +1,35 @@
 import Cocoa
 
-enum RootError : Error {
-    case out_of_bound
-    case no_root
+enum rootError: Error {
+    case outOfBounds
+    case noRoot
 }
 
-func squareRoot(_ n: Int) throws -> Int {
-    if (n > 10000) || (n < 1) {
-        throw RootError.out_of_bound
+func squareRoot(_ number: Int) throws -> Int {
+    var root: Int=0
+    var hasRoot: Bool=false
+    if number < 0 || number > 10000 {
+        throw rootError.outOfBounds
     }
-    
-    for i in 2...100 {
-        if i*i == n {
-           return i
+    for i in 1...number/2{
+        if i*i == number {
+            root = i
+            hasRoot = true
         }
     }
-    throw RootError.no_root
+    if !hasRoot {
+        throw rootError.noRoot
+    }
+    return root
 }
 
-let number = 9
-
+let num: Int = 15
 do {
-    let result = try squareRoot(number)
-    print("Square root of \(number) is \(result)")
-    } catch RootError.out_of_bound {
-        print("Out of bound")
-    } catch RootError.no_root {
-        print("No root")
-    }
-
-
+    try print("The square root of \(num) is:", (squareRoot(num)))
+} catch rootError.outOfBounds {
+    print("Out of bounds")
+} catch rootError.noRoot {
+    print("No root")
+} catch {
+    print("An unknown error occured")
+}
